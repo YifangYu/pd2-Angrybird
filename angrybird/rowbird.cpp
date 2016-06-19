@@ -14,7 +14,7 @@ RowBird::RowBird(b2World *g_world)
     //create b2body
     b2BodyDef bodydef;
     bodydef.type=b2_dynamicBody;
-    bodydef.position.Set(200,200);
+    bodydef.position.Set(300,200);
     birdbody = birdworld->CreateBody(&bodydef);
     birdbody->SetAngularDamping(0.5);
     b2CircleShape bodyshape;
@@ -63,7 +63,6 @@ RowBird::birdmove()
 {
     //set view center
     game->centerOn(this);
-    game->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     this->setPos(birdbody->GetPosition().x-25,568-birdbody->GetPosition().y-25);
     this->setRotation(birdbody->GetAngle()*180/3.1415926);

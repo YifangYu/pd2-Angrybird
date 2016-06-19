@@ -30,7 +30,7 @@ public:
 
     void activeworld();    
     void createthings();    
-    void displayMenu();
+
 public slots:
     worldtick();
 

@@ -11,11 +11,8 @@
         <file>image/yellow.png</file>
         <file>image/rod1.png</file>
         <file>image/gl1.png</file>
-        <file>image/rodsq1.png</file>
-        <file>image/rodss1.png</file>
         <file>image/wood1.png</file>
         <file>image/woodl1.png</file>
-        <file>image/woodm1.png</file>
         <file>image/bk.jpg</file>
         <file>image/bk.png</file>
     </qresource>
