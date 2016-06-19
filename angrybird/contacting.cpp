@@ -12,23 +12,18 @@ void Contacting::BeginContact(b2Contact *contact)
         return;
     }
 
-
-
-
-
-
-//    if(fa_userdata->ID_NAME == QString("Bird"))
+//    if(fa_userdata->ID_NAME == QString("1"))
 //    {
-//        if(fb_userdata->ID_NAME == QString("Pig"))
+//        if(fb_userdata->ID_NAME == QString("2"))
 //        {
 //            //qDebug() << "hit";
 //        }
 //            //qDebug() << 123;
 //    }
 
-//    if(fb_userdata->ID_NAME == QString("Bird"))
+//    if(fb_userdata->ID_NAME == QString("2"))
 //    {
-//        if(fa_userdata->ID_NAME == QString("Pig"))
+//        if(fa_userdata->ID_NAME == QString("1"))
 //            qDebug() << 123;
 //    }
 }

@@ -35,7 +35,7 @@ Pig::Pig(b2World *g_world,int x,int y)
 
     //add userdata
     UserData *mydata = new UserData;
-    mydata->ID_NAME = QString("Pig");
+    mydata->ID_NAME = QString("2");
     pigbody->SetUserData(mydata);
     UserData * udStruct = (UserData *)pigbody->GetUserData();
 

@@ -34,7 +34,7 @@ RowBird::RowBird(b2World *g_world)
 
     //add userdata
     UserData *mydata = new UserData;
-    mydata->ID_NAME = QString("Bird");
+    mydata->ID_NAME = QString("1");
     birdbody->SetUserData(mydata);
 
 }

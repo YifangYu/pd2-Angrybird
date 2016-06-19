@@ -25,8 +25,6 @@ public:
     QTimer *worldtime;
     b2Body *b2ground;
     Contacting *contactlist;
-    QPushButton *btn_start;
-    QPushButton *btn_exit;
 
     void activeworld();    
     void createthings();    
