@@ -2,6 +2,9 @@
 #include <QDebug>
 #include <QPixmap>
 #include <QTimer>
+#include <game.h>
+
+extern Game * game;
 
 RowBird::RowBird(b2World *g_world)
 {
@@ -51,8 +54,17 @@ void RowBird::mousePressEvent(QGraphicsSceneMouseEvent *event)
     this->shoot();
 }
 
+void RowBird::destory()
+{
+
+}
+
 RowBird::birdmove()
 {
+    //set view center
+    game->centerOn(this);
+    game->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
     this->setPos(birdbody->GetPosition().x-25,568-birdbody->GetPosition().y-25);
     this->setRotation(birdbody->GetAngle()*180/3.1415926);
 }

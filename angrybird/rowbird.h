@@ -13,11 +13,12 @@ public:
     RowBird(b2World *g_world);
     b2Body *birdbody;
     b2World *birdworld;
-    void shoot();
-    void mousePressEvent(QGraphicsSceneMouseEvent * event);
+    virtual void shoot();
+    virtual void mousePressEvent(QGraphicsSceneMouseEvent * event);
+    virtual void destory();
 
 public slots:
-    birdmove();
+    virtual birdmove();
 
 };
 

@@ -10,6 +10,10 @@
 #include<block.h>
 #include<pig.h>
 #include<contacting.h>
+#include<blocklong.h>
+#include<QBrush>
+#include<QPushButton>
+#include<QImage>
 
 class Game : public QGraphicsView
 {
@@ -19,10 +23,14 @@ public:
     QGraphicsScene *scene;
     b2World *world;
     QTimer *worldtime;
-    void activeworld();
     b2Body *b2ground;
-    void createthings();
     Contacting *contactlist;
+    QPushButton *btn_start;
+    QPushButton *btn_exit;
+
+    void activeworld();    
+    void createthings();    
+    void displayMenu();
 public slots:
     worldtick();
 

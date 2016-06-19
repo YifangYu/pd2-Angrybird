@@ -1,5 +1,7 @@
 #include "game.h"
 #include "rowbird.h"
+#include <QBrush>
+#include <QPixmap>
 
 Game::Game()
 {
@@ -7,10 +9,8 @@ Game::Game()
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,1200,576);
     this->setScene(scene);
-    this->setFixedSize(768,576);
+    this->setFixedSize(1200,576);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    //setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    //horiozontal scroll bar doesn't need to be off
 
     //set gravity
     b2Vec2 gravity;
@@ -25,8 +25,10 @@ Game::Game()
     createthings();
     activeworld();
 
+    //set background
+    setBackgroundBrush(QBrush(QPixmap(":image/bk.png")));
 
-    //set ground 係數
+    //set ground
     b2BodyDef b2grounddef;
     b2grounddef.position.Set(0.0f,25.0f);
     b2ground = world->CreateBody(&b2grounddef);
@@ -65,9 +67,9 @@ void Game::createthings()
     block_rod1_2 = new Block(world,800,476);
     scene->addItem(block_rod1_2);
 
-    Block *block_rod1_3;
-    block_rod1_3 = new Block(world,600,376);
-    scene->addItem(block_rod1_3);
+    Blocklong *blocklong1;
+    blocklong1 = new Blocklong(world,600,454);
+    scene->addItem(blocklong1);
 
     //create birds
     RowBird *bird;
@@ -76,7 +78,7 @@ void Game::createthings()
 
     //create pigs
     Pig *pig;
-    pig = new Pig(world,700,456);
+    pig = new Pig(world,700,448);
     scene->addItem(pig);
 
 }
@@ -86,3 +88,31 @@ Game::worldtick()
     world->Step(1.0/60.0,6,2);
 
 }
+
+void Game::displayMenu()
+{
+    QImage bg;
+    bg.load(":/image/title.png");
+
+    //set start button
+    btn_start = new QPushButton(this);
+    btn_start->setGeometry(120,375,207,93);
+    btn_start->setIcon(QIcon(":/image/play.png"));
+    btn_start->setIconSize(QSize(207,93));
+    scene->addItem(btn_start);
+    connect(btn_start,SIGNAL(clicked()),this,SLOT(start()));
+
+    //set exit button
+    btn_exit = new QPushButton(this);
+    btn_exit->setGeometry(425,375,207,104);
+    btn_exit->setIcon(QIcon(":/image/exit.png"));
+    btn_exit->setIconSize(QSize(207,104));
+    scene->addItem(btn_exit);
+    connect(btn_exit,SIGNAL(clicked()),this,SLOT(over()));
+
+    //hide after click
+    connect(btn_start,SIGNAL(clicked(bool)),btn_start,SLOT(hide()));
+    connect(btn_start,SIGNAL(clicked(bool)),btn_exit,SLOT(hide()));
+
+}
+

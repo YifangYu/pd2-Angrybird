@@ -10,28 +10,13 @@
         <file>image/title.png</file>
         <file>image/yellow.png</file>
         <file>image/rod1.png</file>
-        <file>image/rod2.png</file>
-        <file>image/rod3.png</file>
-        <file>image/g1.png</file>
-        <file>image/g2.png</file>
-        <file>image/g3.png</file>
         <file>image/gl1.png</file>
-        <file>image/gl2.png</file>
-        <file>image/gl3.png</file>
         <file>image/rodsq1.png</file>
-        <file>image/rodsq2.png</file>
-        <file>image/rodsq3.png</file>
         <file>image/rodss1.png</file>
-        <file>image/rodss2.png</file>
-        <file>image/rodss3.png</file>
         <file>image/wood1.png</file>
-        <file>image/wood2.png</file>
-        <file>image/wood3.png</file>
         <file>image/woodl1.png</file>
-        <file>image/woodl2.png</file>
-        <file>image/woodl3.png</file>
         <file>image/woodm1.png</file>
-        <file>image/woodm2.png</file>
-        <file>image/woodm3.png</file>
+        <file>image/bk.jpg</file>
+        <file>image/bk.png</file>
     </qresource>
 </RCC>

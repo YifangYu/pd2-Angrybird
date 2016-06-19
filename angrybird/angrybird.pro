@@ -63,7 +63,13 @@ SOURCES += main.cpp\
     rowbird.cpp \
     block.cpp \
     pig.cpp \
-    contacting.cpp
+    contacting.cpp \
+    blocklong.cpp \
+    addbird.cpp \
+    birdred.cpp \
+    birdyellow.cpp \
+    birdblue.cpp \
+    birdblack.cpp
 
 HEADERS  += \
     Box2D/Collision/Shapes/b2ChainShape.h \
@@ -118,7 +124,15 @@ HEADERS  += \
     block.h \
     pig.h \
     userdata.h \
-    contacting.h
+    contacting.h \
+    blocklong.h \
+    addbird.h \
+    Box2D/birdred.h \
+    Box2D/birdyellow.h \
+    birdred.h \
+    birdyellow.h \
+    birdblue.h \
+    birdblack.h
 
 FORMS    +=
 
